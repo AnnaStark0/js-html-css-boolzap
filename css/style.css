@@ -32,7 +32,7 @@ font-family: Arial, Helvetica, sans-serif;
     background-color: aquamarine;
 }
 
-/*Inizio Row User*/
+/*Row User*/
 .rowUser {
     height: 60px;
     background-color: lightgray;
@@ -61,27 +61,60 @@ font-family: Arial, Helvetica, sans-serif;
     justify-content: flex-end;
 }
 
-.fas {
+
+.userDx .fas {
     font-size: 20px;
     padding: 10px;
     color: grey;
 }
 
-/*Fine Row User*/
+/*Row Notif*/
 
-.rowNotice {
+.rowNotif {
     height: 60px;
-    background-color: rgb(62, 212, 250);
+    background-color: rgb(97, 188, 248);
+    display: flex;
+    align-items: center;
 }
+
+.rowNotif .far {
+    margin: 5px;
+    padding: 10px;
+    background-color: white;
+    color:  rgb(97, 188, 248);
+    border-radius: 50%;
+}
+
+.notifText p {
+    font-size: 13px;
+}
+
+.notifText span {
+    font-size: 11px;
+    text-decoration: underline;
+}
+
+/*Row Search*/
 
 .rowSearch {
-    height: 50px;
-    background-color: rgb(56, 153, 243);
+    height: 40px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.rowSearch input {
+    padding: 7px 200px 7px 7px;
+    border: none;
+    border-radius: 5px;
+    font-size: 11px;
+}
+
+/*Row Contacts*/
 .rowContacts {
-    height: 480px;
-    background-color: rgb(109, 139, 230);
+    height: 490px;
+    background-color: white;
     overflow-y: auto;
 }
 
