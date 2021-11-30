@@ -5,7 +5,7 @@
 }
 
 body {
-
+font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -19,7 +19,7 @@ body {
 
 .window {
     margin: 0 auto;
-    width: 1000px;
+    width: 1080px;
     height: 650px;
     background-color: rgb(61, 61, 61);
     display: flex;
@@ -28,14 +28,46 @@ body {
 /*-----COL-1-----*/
 .col1 {
     height: 650px;
-    width: 30%;
+    width: 35%;
     background-color: aquamarine;
 }
 
+/*Inizio Row User*/
 .rowUser {
     height: 60px;
-    background-color: dimgrey;
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
 }
+
+.userSx {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#avatar {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.userSx span {
+    padding: 5px;
+}
+
+.userDx {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.fas {
+    font-size: 20px;
+    padding: 10px;
+    color: grey;
+}
+
+/*Fine Row User*/
 
 .rowNotice {
     height: 60px;
@@ -55,23 +87,23 @@ body {
 
 /*-----COL-2-----*/
 .col2 {
-    width: 70%;
+    width: 65%;
     background-color: deepskyblue;
 }
 
-.rowUserDx {
+.row1Dx {
     margin-left: 1px;
     height: 60px;
-    background-color: dimgrey;
+    background-color:lightgray;
 }
 
 .rowBoxDx {
-height: 490px;
-background-color: mediumseagreen;
+height: 500px;
+background-color: rgb(131, 192, 202);
 overflow-y: auto;
 }
 
 .rowText {
-    height: 100px;
+    height: 90px;
     background-color: grey;
 }
