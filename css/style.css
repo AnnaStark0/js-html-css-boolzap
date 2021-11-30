@@ -25,12 +25,53 @@ body {
     display: flex;
 }
 
+/*-----COL-1-----*/
 .col1 {
+    height: 650px;
     width: 30%;
     background-color: aquamarine;
 }
 
+.rowUser {
+    height: 60px;
+    background-color: dimgrey;
+}
+
+.rowNotice {
+    height: 60px;
+    background-color: rgb(62, 212, 250);
+}
+
+.rowSearch {
+    height: 50px;
+    background-color: rgb(56, 153, 243);
+}
+
+.rowContacts {
+    height: 480px;
+    background-color: rgb(109, 139, 230);
+    overflow-y: auto;
+}
+
+/*-----COL-2-----*/
 .col2 {
     width: 70%;
     background-color: deepskyblue;
+}
+
+.rowUserDx {
+    margin-left: 1px;
+    height: 60px;
+    background-color: dimgrey;
+}
+
+.rowBoxDx {
+height: 490px;
+background-color: mediumseagreen;
+overflow-y: auto;
+}
+
+.rowText {
+    height: 100px;
+    background-color: grey;
 }
