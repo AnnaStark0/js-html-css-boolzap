@@ -71,33 +71,14 @@
                     <!--ROW 4-->
                     <div class="rowContacts">
 
-                        <div class="contact">
+                        <div v-for="contact in contacts" class="contact">
 
-                            <div> <img class="avatarContact" src="img/avatar_1.jpg" alt="avatar1"> </div>
+                            <div> <img class="avatarContact" :src="`img/avatar${contact.avatar}.jpg`" alt="avatar1"> </div>
 
-                            <span> Michele </span>
+                            <span> {{contact.name}}</span>
                         </div>
 
-                        <div class="contact active">
 
-                            <div> <img class="avatarContact" src="img/avatar_1.jpg" alt="avatar1"> </div>
-
-                            <span> Michele </span>
-                        </div>
-
-                        <div class="contact">
-
-                            <div> <img class="avatarContact" src="img/avatar_1.jpg" alt="avatar1"> </div>
-
-                            <span> Michele </span>
-                        </div>
-
-                        <div class="contact">
-
-                            <div> <img class="avatarContact" src="img/avatar_1.jpg" alt="avatar1"> </div>
-
-                            <span> Michele </span>
-                        </div>
                     </div>
                     <!--///ROW 4-->
 
@@ -138,7 +119,7 @@
                         
 
                             <!--Message Box Send-->
-                            <div class="messageBoxSend">
+                            <div class="messageBox send">
                                 <div class="messageText">
                                     Hai portato a spasso Flash?
                                 </div>
@@ -150,7 +131,7 @@
                             <!--///Message Box Send-->
 
                             <!--Message Box Send-->
-                            <div class="messageBoxSend">
+                            <div class="messageBox send">
                                 <div class="messageText">
                                     Ricordati di dargli da mangiare
                                 </div>
@@ -162,7 +143,7 @@
                             <!--///Message Box Send-->
 
                             <!--Message Box Received-->
-                            <div class="messageBoxRec">
+                            <div class="messageBox rec">
                                 <div class="messageText">
                                     Tutto fatto!
                                 </div>
