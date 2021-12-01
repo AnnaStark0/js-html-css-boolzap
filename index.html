@@ -10,6 +10,11 @@
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--///Font Awesome Cdn-->
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <!--///Google Fonts-->
     <link rel="stylesheet" href="css/style.css">
     <title>Boolzapp</title>
 </head>
@@ -73,7 +78,8 @@
 
                         <div v-for="contact in contacts" class="contact">
 
-                            <div> <img class="avatarContact" :src="`img/avatar${contact.avatar}.jpg`" alt="avatar1"> </div>
+                            <div> <img class="avatarContact" :src="`img/avatar${contact.avatar}.jpg`" alt="avatar1">
+                            </div>
 
                             <span> {{contact.name}}</span>
                         </div>
@@ -116,43 +122,23 @@
 
                     <!--ROW 2 - BOX CHAT-->
                     <div class="BoxChatMain">
-                        
 
-                            <!--Message Box Send-->
-                            <div class="messageBox send">
-                                <div class="messageText">
-                                    Hai portato a spasso Flash?
-                                </div>
 
-                                <span class="messageDate">
-                                    10/01/2021 15:30:35
-                                </span>
+
+
+                        <!--Message Box Send-->
+                        <div class="messageBox sent">
+                            <div class="messageText">
+                                Hai portato a spasso Flash?
                             </div>
-                            <!--///Message Box Send-->
 
-                            <!--Message Box Send-->
-                            <div class="messageBox send">
-                                <div class="messageText">
-                                    Ricordati di dargli da mangiare
-                                </div>
+                            <span class="messageDate">
+                                10/01/2021 15:30:35
+                            </span>
+                        </div>
+                        <!--///Message Box Send-->
 
-                                <span class="messageDate">
-                                    10/01/2021 15:35:59
-                                </span>
-                            </div>
-                            <!--///Message Box Send-->
 
-                            <!--Message Box Received-->
-                            <div class="messageBox rec">
-                                <div class="messageText">
-                                    Tutto fatto!
-                                </div>
-
-                                <span class="messageDate">
-                                    10/01/2021 15:50:05
-                                </span>
-                            </div>
-                            <!--///Message Box Received-->
 
                         
 
