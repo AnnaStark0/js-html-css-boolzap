@@ -76,7 +76,7 @@
                     <!--ROW 4-->
                     <div class="rowContacts">
 
-                        <div v-for="contact in contacts" class="contact">
+                        <div v-for="(contact, index) in contacts" class="contact" :class="index == currentContact ? 'active' : '' " @click="activeChat(index)">
 
                             <div> <img class="avatarContact" :src="`img/avatar${contact.avatar}.jpg`" alt="avatar1">
                             </div>
@@ -138,10 +138,6 @@
                         </div>
                         <!--///Message Box Send-->
 
-provaprovaaaaa
-provaaaaprova
-provadjovspjfdpdfa
-prova
 
                         
 

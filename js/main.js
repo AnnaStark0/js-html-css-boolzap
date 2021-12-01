@@ -82,8 +82,12 @@ const app = new Vue ({
                 ],
             },
         ],
+        currentContact: 0,
     },
     methods: {
+        activeChat: function(index){
+            this.currentContact = index;
+        },
 
     }
-})
+});
