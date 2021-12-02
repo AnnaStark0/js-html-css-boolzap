@@ -102,11 +102,11 @@
 
                         <div class="rowChatSx">
                             <span>
-                                <img class="avatarContact" src="img/avatar_1.jpg" alt="Avatar">
+                                <img class="avatarContact" src="`img/avatar${contacts[currentContact].avatar}.jpg`" :alt="contacts[currentContact].name">
                             </span>
 
                             <div>
-                                <span>Michele</span>
+                                <span>{{contacts[currentContact].name}}</span>
                                 <div class="accesso">Ultimo accesso oggi alle</div>
                             </div>
                         </div>
@@ -122,9 +122,6 @@
 
                     <!--ROW 2 - BOX CHAT-->
                     <div class="BoxChatMain">
-
-
-
 
                         <!--Message Box Send-->
                         <div class="messageBox sent">
