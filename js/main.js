@@ -84,6 +84,7 @@ const app = new Vue({
         currentContact: 0,
         inputmessage: 'Ciao!',
         date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+        ultimoAccesso: dayjs().format('HH:mm'),
     },
     methods: {
         activeChat: function (index) {
@@ -91,17 +92,29 @@ const app = new Vue({
         },
 
         //PROMEMORIA !! Assolutamente da sistemare !!
-        addMessage: function (){
-            this.contacts[this.currentContact].messages.push({date: this.date, message: this.inputmessage, status: 'sent' });
-            this.inputmessage= '';
+        addMessage: function () {
+            this.contacts[this.currentContact].messages.push({
+                date: this.date,
+                message: this.inputmessage,
+                status: 'sent'
+            });
+            this.inputmessage = '';
         },
-       
 
-        recMessage: function() {
-            this.contacts[this.currentContact].messages.push({ date: this.date, message: 'Che la forza sia con te!', status: 'received'  });
+
+        recMessage: function () {
+            this.contacts[this.currentContact].messages.push({
+                date: this.date,
+                message: 'Che la forza sia con te!',
+                status: 'received'
+            });
+
+
         },
 
-    },
+
+
+    }
 
 
 
