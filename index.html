@@ -102,7 +102,9 @@
 
                         <div class="rowChatSx">
                             <span>
+                                <!--Non funziona !! Da sistemare-->
                                 <img class="avatarContact" src="`img/avatar${contacts[currentContact].avatar}.jpg`" :alt="contacts[currentContact].name">
+                                <!--//////-->
                             </span>
 
                             <div>
@@ -124,13 +126,13 @@
                     <div class="BoxChatMain">
 
                         <!--Message Box Send-->
-                        <div class="messageBox sent">
-                            <div class="messageText">
-                                Hai portato a spasso Flash?
+                        <div class="messageBox" v-for="mess in contacts[currentContact].messages" :class="mess.status">
+                            <div class="messageText" >
+                                {{mess.message}}
                             </div>
 
                             <span class="messageDate">
-                                10/01/2021 15:30:35
+                               {{mess.date}}
                             </span>
                         </div>
                         <!--///Message Box Send-->
