@@ -82,7 +82,7 @@ const app = new Vue({
             },
         ],
         currentContact: 0,
-        inputmessage: '',
+        inputmessage: 'ciao',
     },
     methods: {
         activeChat: function (index) {
@@ -91,8 +91,12 @@ const app = new Vue({
 
         addMessage: function (){
             this.contacts[this.currentContact].messages.push({date: 'dd/mm/yy', message: this.inputmessage, status: 'sent' });
-            this.inputmessage = '';
-        }
+        },
+
+        recMessage: function() {
+            this.contacts[this.currentContact].messages.push({ date: 'dd/mm/yy', message: 'Ok!', status: 'received'  });
+        },
+
     },
 
 
