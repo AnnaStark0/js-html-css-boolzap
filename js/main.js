@@ -82,7 +82,7 @@ const app = new Vue({
             },
         ],
         currentContact: 0,
-        inputmessage: "ciao",
+        inputmessage: "",
         date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
         ultimoAccesso: dayjs().format('HH:mm'),
     },
@@ -91,7 +91,7 @@ const app = new Vue({
             this.currentContact = index;
         },
 
-        // -- !! da sistemare !! --
+       
         addMessage: function () {
             this.contacts[this.currentContact].messages.push({
                 _date: this.date,
