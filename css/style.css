@@ -71,11 +71,7 @@ font-family: 'Lato', sans-serif;
 }
 
 
-.userDx .fas {
-    font-size: 20px;
-    padding: 10px;
-    color: #b1b1b1;
-}
+
 
 /*Row Notif*/
 
@@ -94,14 +90,15 @@ font-family: 'Lato', sans-serif;
     border-radius: 50%;
 }
 
+.notifText a {
+    font-size: 11px;
+    color: black;
+}
+
 .notifText p {
     font-size: 13px;
 }
 
-.notifText span {
-    font-size: 11px;
-    text-decoration: underline;
-}
 
 /*Row Search*/
 
@@ -125,6 +122,7 @@ font-family: 'Lato', sans-serif;
     height: 490px;
     background-color: white;
     overflow-y: auto;
+    
     /* flex-grow: 1; */
 }
 
@@ -139,6 +137,12 @@ font-family: 'Lato', sans-serif;
     align-items: center;
    padding: 10px;
    border-bottom: 1px solid #f1f1f1;
+   
+}
+
+.contact:hover {
+    background-color: #f8f8f8;
+    cursor: pointer;
 }
 
 .rowContacts #avatar {
@@ -178,11 +182,7 @@ align-items: center;
 
 
 
-.rowChatDx .fas {
-    font-size: 20px;
-    padding: 10px;
-    color: #b1b1b1;
-}
+
 
 
 /*Box Chat Main*/
@@ -250,8 +250,30 @@ max-width: 250px;
     padding:20px;
 }
 
+
+
+/*Icone*/
+
+.fas {
+    font-size: 20px;
+    padding: 10px;
+    color: #b1b1b1;
+    
+}
+
 .rowText i {
     font-size: 20px;
     color: grey;
 }
+
+.fas:hover {
+    cursor: pointer;
+    color: grey;
+}
+
+.rowText i:hover {
+    cursor: pointer;
+    color: rgb(83, 83, 83);
+}
+
 
