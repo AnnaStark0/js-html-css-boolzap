@@ -82,7 +82,7 @@ const app = new Vue({
             },
         ],
         currentContact: 0,
-        inputmessage: 'Ciao!',
+        inputmessage: "ciao",
         date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
         ultimoAccesso: dayjs().format('HH:mm'),
     },
@@ -91,15 +91,28 @@ const app = new Vue({
             this.currentContact = index;
         },
 
-        //PROMEMORIA !! Assolutamente da sistemare !!
+        // -- !! da sistemare !! --
         addMessage: function () {
             this.contacts[this.currentContact].messages.push({
-                date: this.date,
+                _date: this.date,
+                get date() {
+                    return this._date;
+                },
+                set date(value) {
+                    this._date = value;
+                },
                 message: this.inputmessage,
                 status: 'sent'
             });
-            this.inputmessage = '';
+
         },
+
+        // addMessage: function () {
+        //     if (this.inputmessage != "") {
+        //         this.toboos.push(this.inputTobo);
+        //         this.inputmessage = "";
+        //     }
+        // },
 
 
         recMessage: function () {
@@ -114,8 +127,22 @@ const app = new Vue({
 
 
 
-    }
+        // -- Prove Non Funzionanti --
 
+        // setTimeout: function(){
+        //     this.recMessage}, 3000
+
+
+        // setTimeout(() => {
+        //     this.contacts[this.currentContact].messages.push({
+        //                  date: this.date,
+        //                      message: 'Che la forza sia con te!',
+        //                      status: 'received'
+        //                  });
+        // }, 2000);
+
+
+    },
 
 
 });

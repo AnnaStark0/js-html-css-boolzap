@@ -15,7 +15,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
     <!--///Google Fonts-->
+    <!--My Css-->
     <link rel="stylesheet" href="css/style.css">
+    <!--///My Css-->
     <title>Boolzapp</title>
 </head>
 
@@ -25,73 +27,55 @@
             <!--INIZIO WINDOW WHATZAPP-->
             <div class="window">
 
-
-
                 <!-----COL-1----->
                 <div class="col1">
 
                     <!--ROW 1-->
                     <div class="rowUser">
-
                         <div class="userSx">
                             <span>
                                 <img id="avatar" src="img/avatar_io.jpg" alt="Avatar">
                             </span>
-
                             <span> Anna </span>
                         </div>
-
                         <div class="userDx">
                             <span> <i class="fas fa-circle-notch"></i> </span>
                             <span> <i class="fas fa-comment-alt"></i> </span>
                             <span> <i class="fas fa-ellipsis-v"></i> </span>
                         </div>
-
                     </div>
                     <!--///ROW 1-->
 
                     <!--ROW 2-->
                     <div class="rowNotif">
-
                         <div>
                             <i class="far fa-bell-slash"></i>
                         </div>
-
                         <div class="notifText">
                             <p>Ricevi notifiche di nuovi messaggi</p>
                             <a href="#">Attiva notifiche desktop</a>
                         </div>
-
                     </div>
                     <!--///ROW 2-->
 
                     <!--ROW 3-->
                     <div class="rowSearch">
-
                         <input type="text" placeholder="Cerca o inizia una nuova chat">
-
                     </div>
                     <!--///ROW 3-->
 
                     <!--ROW 4-->
                     <div class="rowContacts">
-
-                        <div v-for="(contact, index) in contacts" class="contact" :class="index == currentContact ? 'active' : '' " @click="activeChat(index)">
-
+                        <div v-for="(contact, index) in contacts" class="contact"
+                            :class="index == currentContact ? 'active' : '' " @click="activeChat(index)">
                             <div> <img class="avatarContact" :src="`img/avatar${contact.avatar}.jpg`" alt="avatar1">
                             </div>
-
                             <span> {{contact.name}}</span>
                         </div>
-
-
                     </div>
                     <!--///ROW 4-->
-
                 </div>
                 <!-----///COL-1----->
-
-
 
 
                 <!-----COL-2----->
@@ -99,14 +83,11 @@
 
                     <!--ROW 1 DX-->
                     <div class="rowChat">
-
                         <div class="rowChatSx">
                             <span>
-                                
-                                <img class="avatarContact" :src="`img/avatar${contacts[currentContact].avatar}.jpg`" :alt="contacts[currentContact].name">
-                                
+                                <img class="avatarContact" :src="`img/avatar${contacts[currentContact].avatar}.jpg`"
+                                    :alt="contacts[currentContact].name">
                             </span>
-
                             <div>
                                 <span>{{contacts[currentContact].name}}</span>
                                 <div class="accesso">Ultimo accesso oggi alle {{ultimoAccesso}} </div>
@@ -118,7 +99,6 @@
                             <span> <i class="fas fa-paperclip"></i> </span>
                             <span> <i class="fas fa-ellipsis-v"></i> </span>
                         </div>
-
                     </div>
                     <!--///ROW 1 DX-->
 
@@ -127,34 +107,25 @@
 
                         <!--Message Box Send-->
                         <div class="messageBox" v-for="mess in contacts[currentContact].messages" :class="mess.status">
-                            <div class="messageText" >
+                            <div class="messageText">
                                 {{mess.message}}
                             </div>
-
                             <span class="messageDate">
-                               {{mess.date}}
+                                {{mess.date}}
                             </span>
                         </div>
                         <!--///Message Box Send-->
-
-
-                        
-
                     </div>
                     <!--///ROW 2 - BOX CHAT-->
 
                     <!--ROW 3 DX-->
                     <div class="rowText">
-
                         <span> <i class="far fa-smile"></i> </span>
-
-                        <input type="text" placeholder="Scrivi un messaggio" v-model="inputMessage" @keyup.enter="addMessage(), recMessage()">
-
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="inputMessage"
+                            @keyup.enter="addMessage(), recMessage()">
                         <span> <i class="fas fa-microphone"></i> </span>
-
                     </div>
                     <!--///ROW 3 DX-->
-
                 </div>
                 <!-----COL-2----->
             </div>
@@ -162,12 +133,11 @@
         </div>
     </div>
 
-
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-
+    <!--Date Js-->
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-
+    <!--My Script-->
     <script src="js/main.js"></script>
 </body>
 
