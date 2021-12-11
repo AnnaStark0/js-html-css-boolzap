@@ -105,41 +105,16 @@ const app = new Vue({
                 status: 'sent'
             });
 
-        },
-
-        // addMessage: function () {
-        //     if (this.inputmessage != "") {
-        //         this.toboos.push(this.inputTobo);
-        //         this.inputmessage = "";
-        //     }
-        // },
-
-
-        recMessage: function () {
-            this.contacts[this.currentContact].messages.push({
-                date: this.date,
-                message: 'Che la forza sia con te!',
-                status: 'received'
-            });
-
-
+			setTimeout(() => {
+				this.contacts[this.currentContact].messages.push({
+					date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+					message: "Che la forza sia con te!",
+					status: 'received'
+				});
+			}, 1000);
         },
 
 
-
-        // -- Prove Non Funzionanti --
-
-        // setTimeout: function(){
-        //     this.recMessage}, 3000
-
-
-        // setTimeout(() => {
-        //     this.contacts[this.currentContact].messages.push({
-        //                  date: this.date,
-        //                      message: 'Che la forza sia con te!',
-        //                      status: 'received'
-        //                  });
-        // }, 2000);
 
 
     },
